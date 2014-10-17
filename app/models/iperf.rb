@@ -25,7 +25,7 @@ class Iperf
 
       file.close
 
-      cmd = "iperf -c #{remote_host} -u -b #{bandwidth} -p #{port} -l #{size} -t #{duration}"
+      cmd = "iperf -c #{remote_host} -i 1 -u -b #{bandwidth} -p #{port} -l #{size} -t #{duration}"
 
       Open3.popen2e(cmd) do |stdin, stdout_err, wait_thr|
         state[:pid] = wait_thr.pid
