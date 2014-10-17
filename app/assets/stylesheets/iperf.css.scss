@@ -1,3 +1,50 @@
 // Place all the styles related to the iperf controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family:Arial;
+  padding:20px;
+}
+
+.iperf-test {
+  h1 {
+    text-align:center;
+  }
+}
+
+.what {
+  margin:20px 0;
+}
+
+.preparation {
+  margin:20px 0;
+}
+
+ol li {
+  margin:10px 0;
+}
+
+.iperf-example, .iperf-status, .example-cmd {
+    display:inline-block;
+    font-family:courier new;
+    padding:10px;
+    border-radius:3px;
+    border-style:solid;
+    border-width:1px;
+    border-color:#97A358;
+    background-color:#F1FFAD;
+    margin:10px 0;
+    white-space: pre;
+}
+
+.iperf-form  {
+  label { width:12em; margin:0em 1em; text-align:right; display:inline-block;}
+  input {margin:0.5em 0em; display:inline-block; width:10em;}
+  .hint {
+    font-size:10px;
+    color:#333;
+    margin-left:20px;
+  }
+}
+

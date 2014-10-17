@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   root "iperf#index"
+  match "/api/iperf/status" => 'iperf#status', :via => :get
+  match "/api/iperf/start" => 'iperf#start', :via => :post
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

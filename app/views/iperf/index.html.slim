@@ -1,0 +1,56 @@
+.iperf-test
+  h1 TEST YOUR NETWORK WITH IPERF
+  h2 WHAT IS THIS?
+  .what
+    a href="https://iperf.fr/" IPerf
+    | &nbsp; is a fanstatic open-source tool that can help you measure the characteristics of your network.
+  .what
+    | It can do many things, but we've set it up to let <b>you verify if you can receive UDP into your network</b>.
+  .what
+    | If you hit START! in the section below, the server hosting this web page will use IPerf to send UDP into your network on the port you specify.
+  h2 PREPARATION
+  .preparation
+
+  .preparation
+    | To know if UDP can make it into your network, you will need to also run IPerf on your own machine.
+    br
+  .prepration
+    | To run IPerf:
+    ol
+      li
+        a href="https://iperf.fr/"Download IPerf from the project's home page.
+      li
+        | Extract the zip file somewhere convenient.
+      li
+        | Open up the command line on your system (cmd.exe on Windows, Terminal on MacOSX, or your favorite terminal on Linux)
+      li
+        | 'cd' to wherever you downloaded iperf to.
+        br
+        .example-cmd
+          | cd c:\Users\username\Downloads\iperf_extracted
+      li
+        | And type in this command:
+        br
+        br
+        | On Windows:
+        br
+        .iperf-example data-react-class="IPerfExample"  data-react-props="#{{windows: true}.to_json}"
+        br
+        | On MacOSX or Linux:
+        br
+        .iperf-example data-react-class="IPerfExample"  data-react-props="#{{windows: false}.to_json}"
+  .preparation
+    | Once you have the command running, IPerf is now waiting on your machine, and it's time to push START! below.
+  .preparation
+    | If successful, you will see the IPerf command that you started to print out results about the test after you hit START here. If it stays silent, you need to check your network configuration still.
+  .preparation
+
+
+  h2 TEST!
+  .iperf-form data-react-class="IPerfForm" data-react-props="#{{remote_ip: request.remote_ip}.to_json}"
+
+  h3 IPERF OUTPUT (from the server)
+  .what
+    | As the test runs, we'll also output what the IPerf running on the server is saying:
+  .iperf-status data-react-class="IPerfStatus" data-react-props="#{{url: '/api/iperf/status'}.to_json}"
+
