@@ -1,3 +1,6 @@
+RUN THIS: nohup bundle exec puma -C /home/seth/iperf/shared/config/puma/production.rb  &
+
+
 == README
 
 This README would normally document whatever steps are necessary to get the
